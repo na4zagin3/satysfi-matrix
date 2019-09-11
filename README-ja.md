@@ -28,27 +28,50 @@
 
 ## インストール方法
 
-`matrix.satyh` を `LIBROOT/dist/packages/` 下へコピーしてください (LIBROOT は環境によって変わります)。
+### Satyrographos を使用する場合
 
-### 例: Unix 系 OS
+まず、 [Satyrographos] をインストールしてください。その後、 `satysfi-matrix` パッケージをインストールし、 `satyrographos install` を実行してください。
 
 ```sh
-git clone https://github.com/nekketsuuu/satysfi-matrix.git
-cd satysfi-matrix
-cp matrix.satyh ~/.satysfi/dist/packages/
+opam install satysfi-matrix
+satyrographos install
 ```
 
-### 例: Windows
+### 手動でコピーする場合
+
+`matrix.satyh` を `LIBROOT/dist/packages/matrix/` 下へコピーしてください (LIBROOT は環境によって変わります)。
+
+#### 例: Unix 系 OS
 
 ```sh
 git clone https://github.com/nekketsuuu/satysfi-matrix.git
 cd satysfi-matrix
-copy matrix.satyh %USERPROFILE%\.satysfi\dist\packages\
+mkdir -p ~/.satysfi/dist/packages/matrix
+cp matrix.satyh ~/.satysfi/dist/packages/matrix/
+```
+
+#### 例: Windows
+
+```sh
+git clone https://github.com/nekketsuuu/satysfi-matrix.git
+cd satysfi-matrix
+mkdir %USERPROFILE%\.satysfi\dist\packages\matrix
+copy matrix.satyh %USERPROFILE%\.satysfi\dist\packages\matrix\
 ```
 
 ## アンインストール方法
 
-`LIBROOT/dist/packages/matrix.satyh` を削除してください。
+### Satyrographos を使用する場合
+
+`satysfi-matrix` パッケージをアンインストールしてください。
+
+```sh
+opam uninstall satysfi-matrix
+```
+
+### 手動でコピーする場合
+
+`LIBROOT/dist/packages/matrix/matrix.satyh` を削除してください。
 
 ## 既知の問題
 
@@ -65,3 +88,4 @@ Pull request も issue 報告も歓迎しています！　英語でも日本語
   [sample_matrix.png]: https://raw.githubusercontent.com/nekketsuuu/satysfi-matrix/master/doc/img/sample_matrix.png
   [example]: https://github.com/nekketsuuu/satysfi-matrix/blob/master/example
   [GitHub Issues]: https://github.com/nekketsuuu/satysfi-matrix/issues
+  [Satyrographos]: https://github.com/na4zagin3/satyrographos

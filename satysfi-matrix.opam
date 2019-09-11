@@ -1,0 +1,32 @@
+opam-version: "2.0"
+name: "satysfi-matrix"
+version: "0.0.1"
+synopsis: "Math matrix library for SATySFi"
+description: """
+Matrices in SATySFi!
+
+this requires Satyrographos to install. See https://github.com/na4zagin3/satyrographos.
+"""
+maintainer: "nekketsuuu <nekketsuuu@users.noreply.github.com>"
+authors: "nekketsuuu <nekketsuuu@users.noreply.github.com>"
+license: "Unlicense"
+homepage: "https://github.com/nekketsuuu/satysfi-matrix"
+bug-reports: "https://github.com/nekketsuuu/satysfi-matrix/issues"
+dev-repo: "git+https://github.com/nekketsuuu/satysfi-matrix.git"
+depends: [
+  "satysfi" {>= "0.0.3" & < "0.0.4"}
+  "satyrographos" {>= "0.0.2" & < "0.0.3"}
+]
+build: [ ]
+install: [
+  ["satyrographos" "opam" "install"
+   "-name" "matrix"
+   "-prefix" "%{prefix}%"
+   "-script" "%{build}%/Satyristes"]
+]
+remove: [
+  ["satyrographos" "opam" "uninstall"
+   "-name" "matrix"
+   "-prefix" "%{prefix}%"
+   "-script" "%{build}%/Satyristes"]
+]

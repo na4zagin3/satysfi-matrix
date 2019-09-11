@@ -28,27 +28,50 @@ See [`example`][example] for more complicated examples.
 
 ## Installation
 
-Just copy `matrix.satyh` under your `LIBROOT/dist/packages/` (LIBROOT changes depending on your environment).
+### With Satyrographos
 
-### Example: Unix-like OSs
+Install [Satyrographos](https://github.com/na4zagin3/satyrographos). Then, install `satysfi-matrix` package and run `satyrographos install` as follows.
 
 ```sh
-git clone https://github.com/nekketsuuu/satysfi-matrix.git
-cd satysfi-matrix
-cp matrix.satyh ~/.satysfi/dist/packages/
+opam install satysfi-matrix
+satyrographos install
 ```
 
-### Example: Windows
+### Manually Copying
+
+Just copy `matrix.satyh` under your `LIBROOT/dist/packages/matrix/` (LIBROOT changes depending on your environment).
+
+#### Example: Unix-like OSs
 
 ```sh
 git clone https://github.com/nekketsuuu/satysfi-matrix.git
 cd satysfi-matrix
-copy matrix.satyh %USERPROFILE%\.satysfi\dist\packages\
+mkdir -p ~/.satysfi/dist/packages/matrix
+cp matrix.satyh ~/.satysfi/dist/packages/matrix/
+```
+
+#### Example: Windows
+
+```sh
+git clone https://github.com/nekketsuuu/satysfi-matrix.git
+cd satysfi-matrix
+mkdir %USERPROFILE%\.satysfi\dist\packages\matrix
+copy matrix.satyh %USERPROFILE%\.satysfi\dist\packages\matrix\
 ```
 
 ## Uninstallation
 
-Delete `LIBROOT/dist/packages/matrix.satyh`.
+### Satyrographos
+
+Remove `satysfi-matrix` package.
+
+```sh
+opam uninstall satysfi-matrix
+```
+
+### Manually Copying
+
+Delete `LIBROOT/dist/packages/matrix/matrix.satyh`.
 
 ## Known Issues
 

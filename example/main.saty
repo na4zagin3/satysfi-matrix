@@ -1,5 +1,5 @@
 @require: stdjareport
-@require: matrix
+@require: matrix/matrix
 
 document (|
   title = {Examples of Matrix Library};
